@@ -18,18 +18,21 @@ const Home = () => {
               Mark Attendance
             </Link>
           </div>
-          <Link to="/dashboard" className="action-button">
+          <Link to="/dashboard" className="dashboard-button">
             View Attendance
           </Link>
         </div>
 
         <div className="hero-image">
           <div className="image-placeholder">
-            <img src="https://ci3.googleusercontent.com/meips/ADKq_NYHlkehaIONlBscnV3nLcfdVSq26QM1vSexe__Zy-jC8EqVaRtm1GBCdeYXuOrhsoqZCntokHAaj1WsRHeFDZCRL8_FIfyASp-iRVICUU3EnQ=s0-d-e1-ft#https://tryidoltech.com/wp-content/uploads/2025/01/Logo.png" alt="profile" />
+            <img 
+              src="https://ci3.googleusercontent.com/meips/ADKq_NYHlkehaIONlBscnV3nLcfdVSq26QM1vSexe__Zy-jC8EqVaRtm1GBCdeYXuOrhsoqZCntokHAaj1WsRHeFDZCRL8_FIfyASp-iRVICUU3EnQ=s0-d-e1-ft#https://tryidoltech.com/wp-content/uploads/2025/01/Logo.png" 
+              alt="Tryidol Technologies Logo" 
+              className="company-logo"
+            />
           </div>
         </div>
       </div>
-
     </div>
   );
 };
