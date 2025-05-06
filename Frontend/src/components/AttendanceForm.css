@@ -1,0 +1,252 @@
+/* Base Styles */
+:root {
+  --primary-color: #4361ee;
+  --primary-dark: #3a56d4;
+  --success-color: #4bb543;
+  --error-color: #ff3333;
+  --warning-color: #ffcc00;
+  --text-color: #2b2d42;
+  --light-gray: #f8f9fa;
+  --medium-gray: #e9ecef;
+  --dark-gray: #6c757d;
+  --border-radius: 8px;
+  --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: #f5f7ff;
+}
+
+/* Attendance Container */
+.attendance-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.attendance-card {
+  background: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  width: 100%;
+  max-width: 500px;
+  padding: 30px;
+  transition: var(--transition);
+}
+
+.attendance-header {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.attendance-title {
+  color: var(--primary-color);
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.attendance-subtitle {
+  color: var(--dark-gray);
+  font-size: 14px;
+}
+
+/* Form Styles */
+.attendance-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+.form-input {
+  padding: 12px 15px;
+  border: 1px solid var(--medium-gray);
+  border-radius: var(--border-radius);
+  font-size: 14px;
+  transition: var(--transition);
+  width: 100%;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(67, 97, 238, 0.2);
+}
+
+.form-input[readonly] {
+  background-color: var(--light-gray);
+  cursor: not-allowed;
+}
+
+/* Photo Container */
+.photo-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.camera-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+.camera-preview {
+  width: 100%;
+  max-height: 300px;
+  border-radius: var(--border-radius);
+  background-color: #000;
+  object-fit: cover;
+}
+
+.photo-preview {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.preview-image {
+  width: 100%;
+  max-height: 300px;
+  border-radius: var(--border-radius);
+  object-fit: cover;
+}
+
+/* Button Styles */
+.photo-action-button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: var(--border-radius);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+  width: 100%;
+}
+
+.start-camera-button {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.start-camera-button:hover {
+  background-color: var(--primary-dark);
+}
+
+.capture-button {
+  background-color: var(--success-color);
+  color: white;
+}
+
+.capture-button:hover {
+  background-color: #3fa037;
+}
+
+.retake-button {
+  background-color: var(--error-color);
+  color: white;
+}
+
+.retake-button:hover {
+  background-color: #e60000;
+}
+
+.submit-button {
+  padding: 12px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: var(--border-radius);
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.submit-button:hover {
+  background-color: var(--primary-dark);
+}
+
+.submit-button:disabled {
+  background-color: var(--dark-gray);
+  cursor: not-allowed;
+}
+
+/* Message Styles */
+.message {
+  padding: 12px;
+  border-radius: var(--border-radius);
+  font-size: 14px;
+  text-align: center;
+}
+
+.message.success {
+  background-color: rgba(75, 181, 67, 0.2);
+  color: var(--success-color);
+}
+
+.message.error {
+  background-color: rgba(255, 51, 51, 0.2);
+  color: var(--error-color);
+}
+
+.message.warning {
+  background-color: rgba(255, 204, 0, 0.2);
+  color: #b38f00;
+}
+
+/* Spinner Animation */
+.button-spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: white;
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .attendance-card {
+    padding: 20px;
+  }
+  
+  .attendance-title {
+    font-size: 20px;
+  }
+}
